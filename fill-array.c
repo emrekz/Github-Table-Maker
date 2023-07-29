@@ -1,6 +1,7 @@
 #include "header.h"
 
 void fillArray(char *array, uint8_t *enteredChar) {
+  printf("\n");
   for(uint8_t i=0;i<row;i++){
     for(uint8_t n=0;n<coloumn;n++){
       printf("Row[%d] Coloumn[%d] = ", i,n);

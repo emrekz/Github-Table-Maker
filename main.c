@@ -5,7 +5,7 @@ uint8_t coloumn;
 uint8_t charSize = 5;
 
 int main() {
-  printf("\nWELLCOME TO GITHUB TABLE MAKER ! \n\nPlease enter row and coloumn size of your table.\nInfo : Maximum character size in a cell is %d\n\n",CELL_CHAR_LIMIT);
+  printf("\nWELLCOME TO GITHUB TABLE MAKERR ! \n\nPlease enter row and coloumn size of your table.\nInfo : Default character size in a cell is %d\nRecommendation : Don't make size bigger than 63 for 64-bit PCs\n\n",CELL_CHAR_LIMIT);
   changeCharSize();
   return 0;
 }
@@ -30,6 +30,11 @@ void changeCharSize() {
   if(toupper(changeCharSize) == 'Y') {
     printf("Please enter character limit on each cell : ");
     scanf("%d", &charSize);
+    while(charSize>63){
+      printf("\nDon't make bigger than 63 !\n");
+      printf("Please enter character limit on each cell : ");
+      scanf("%d", &charSize);
+    }
     continueMain();
   }
   else if(toupper(changeCharSize) == 'N') {
