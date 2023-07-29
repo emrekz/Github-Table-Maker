@@ -9,3 +9,9 @@ Copy output of the terminal and paste in to your README.md file.
 ```
 ## Output
 ![](./image/image.gif)
+
+###  Author
+```
+Emre KOZALTI
+github.com/emrekz
+```
