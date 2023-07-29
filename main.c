@@ -2,10 +2,10 @@
 
 uint8_t row;
 uint8_t coloumn;
-uint8_t charSize = 5;
+uint32_t charSize = 20;
 
 int main() {
-  printf("\nWELLCOME TO GITHUB TABLE MAKERR ! \n\nPlease enter row and coloumn size of your table.\nInfo : Default character size in a cell is %d\nRecommendation : Don't make size bigger than 63 for 64-bit PCs\n\n",CELL_CHAR_LIMIT);
+  printf("\nWELLCOME TO GITHUB TABLE MAKERR ! \n\nPlease enter row and coloumn size of your table.\nInfo : Default character size in a cell is %d\nRecommendation : Don't make size so big for system health\n\n",CELL_CHAR_LIMIT);
   changeCharSize();
   return 0;
 }
@@ -15,6 +15,7 @@ void continueMain() {
   scanf("%d", &row);
   printf("Enter coloumn size : ");
   scanf("%d", &coloumn);
+  printf("storage size : %d\n", STORAGE_SIZE);
   char *array = (char *) malloc(STORAGE_SIZE);
   uint8_t *enteredChar = (uint8_t *) malloc(TOTAL_CELL);
   fillArray(array, enteredChar);
@@ -30,8 +31,8 @@ void changeCharSize() {
   if(toupper(changeCharSize) == 'Y') {
     printf("Please enter character limit on each cell : ");
     scanf("%d", &charSize);
-    while(charSize>63){
-      printf("\nDon't make bigger than 63 !\n");
+    while(charSize>1000){
+      printf("\nDon't make bigger than 1000!\n");
       printf("Please enter character limit on each cell : ");
       scanf("%d", &charSize);
     }

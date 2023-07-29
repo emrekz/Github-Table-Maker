@@ -12,7 +12,7 @@
 
 extern uint8_t row;
 extern uint8_t coloumn;
-extern uint8_t charSize;
+extern uint32_t charSize;
 
 #define CELL_CHAR_LIMIT charSize
 #define TOTAL_CELL row*coloumn

@@ -3,7 +3,7 @@
 void writeArray(char *array,  uint8_t *enteredChar) {
   uint8_t currentCell = 0;
   printf("\nWHOAAA! There it is!\nCopy on below code and paste in to your README.md file.\n");
-  for(uint8_t i=0;i<STORAGE_SIZE;i+=CELL_CHAR_LIMIT){
+  for(int16_t i=0;i<=STORAGE_SIZE-CELL_CHAR_LIMIT;i+=CELL_CHAR_LIMIT){
     if(currentCell%coloumn == 0){
       if(currentCell/coloumn == 1){
         printf("\n|");
@@ -13,7 +13,7 @@ void writeArray(char *array,  uint8_t *enteredChar) {
       }
       printf("\n| ");
     }
-    for(uint8_t n=i;n<i+*(enteredChar+currentCell)-1;n++){
+    for(uint64_t n=i;n<i+*(enteredChar+currentCell)-1;n++){
       printf("%c", *(array+n));
     }
     currentCell++;
@@ -23,5 +23,4 @@ void writeArray(char *array,  uint8_t *enteredChar) {
   printf("\n\n\nDo you want to continue? [Y][N] : ");
   scanf("%s", &douwant);
   toupper(douwant)=='Y' ? continueMain() : 0;
-  
 }
