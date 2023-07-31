@@ -11,11 +11,11 @@
 #include <string.h>
 
 extern uint8_t row;
-extern uint8_t coloumn;
+extern uint8_t column;
 extern uint32_t charSize;
 
 #define CELL_CHAR_LIMIT charSize
-#define TOTAL_CELL row*coloumn
+#define TOTAL_CELL row*column
 #define STORAGE_SIZE TOTAL_CELL*sizeof(char)*CELL_CHAR_LIMIT
 
 void fillArray(char *array, uint8_t *enteredChar);

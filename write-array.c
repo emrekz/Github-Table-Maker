@@ -4,10 +4,10 @@ void writeArray(char *array,  uint8_t *enteredChar) {
   uint8_t currentCell = 0;
   printf("\nWHOAAA! There it is!\nCopy on below code and paste in to your README.md file.\n");
   for(int16_t i=0;i<=STORAGE_SIZE-CELL_CHAR_LIMIT;i+=CELL_CHAR_LIMIT){
-    if(currentCell%coloumn == 0){
-      if(currentCell/coloumn == 1){
+    if(currentCell%column == 0){
+      if(currentCell/column == 1){
         printf("\n|");
-        for(uint8_t k=0;k<coloumn;k++){
+        for(uint8_t k=0;k<column;k++){
           printf(" - |");
         }
       }
